@@ -141,7 +141,7 @@ int main() {
 	}
 
 	// Create Window
-	GLFWwindow* window = glfwCreateWindow(640, 480, "My Title", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(640, 480, "tinyshader", NULL, NULL);
 	if (window == nullptr) {
 		std::cout << "glfwCreateWindow error" << std::endl;
 		glfwTerminate();
@@ -197,13 +197,13 @@ int main() {
 	std::string prev_info_log = "";
 
 	// Compile first version of shader
-	std::tie(active_shader, success) = link_shader_program("vertex.vert", "fragment.frag");
+	std::tie(active_shader, success) = link_shader_program("shaders/vertex.vert", "shaders/fragment.frag");
 
 	// Main loop
 	while (!glfwWindowShouldClose(window)){
 
 		// Compile and link shader
-		std::tie(new_shader, success) = link_shader_program("vertex.vert", "fragment.frag");
+		std::tie(new_shader, success) = link_shader_program("shaders/vertex.vert", "shaders/fragment.frag");
 		
 		// Check compilation error
 		if (success) {

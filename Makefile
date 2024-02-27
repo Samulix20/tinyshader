@@ -9,5 +9,5 @@ endif
 
 all:
 	@echo "OS: $(OS)"
-	$(CC) $(LIBS) main.cc -o main.exe
-	./main.exe
+	$(CC) $(LIBS) src/main.cc -o tinyshader.exe
+	./tinyshader.exe

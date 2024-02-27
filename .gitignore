@@ -1,0 +1,5 @@
+# Lib directory
+lib
+
+# Executable files
+*.exe

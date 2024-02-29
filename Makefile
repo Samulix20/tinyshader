@@ -1,13 +1,10 @@
-
 CC := g++ -O3
+LIBS := -lglfw3 -lglew32 -lopengl32
 
-ifeq ($(OS),Windows_NT)
-	LIBS := lib/opengl32.dll lib/glew32.dll lib/glfw3.dll
-else
-	LIBS := -lopengl32 -lglew32 -lglfw3 
-endif
+# Tested in windows mingw64 env for static linking. Change for LIBS
+#LIBS := -static -mwindows $(LIBS) -static-libgcc -static-libstdc++
 
 all:
 	@echo "OS: $(OS)"
-	$(CC) $(LIBS) src/main.cc -o tinyshader.exe
+	$(CC) src/main.cc $(LIBS) -o tinyshader.exe
 	./tinyshader.exe

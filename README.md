@@ -3,11 +3,14 @@ A small [Shadertoy](https://www.shadertoy.com/) inspired C++ OpenGL application.
 
 This was a learning project for understanding the fundamentals of shader programming and basic OpenGL concepts.
 
+# Build enviroment
+
+This project has been tested and built using a [MinGW64](https://www.mingw-w64.org/) Windows enviroment.
+
 # Requirements
 
-- opengl32
-- glfw3
-- glew32
+- [GLFW](https://www.glfw.org/). Open source OpenGL library. (-lglfw3)
+- [GLEW](https://glew.sourceforge.net/). OpenGL extension wrangler library. (-lglew32)
 
 # Run
 

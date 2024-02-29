@@ -1,8 +1,5 @@
 // Create a basic window using GLFW and GLEW
 
-// Define because we are using glfw3.dll
-#define GLFW_DLL
-
 // Extension Wrangler
 #include <GL/glew.h>
 // Simple API for OpenGL
